@@ -4,4 +4,8 @@ if ['app_master', 'app', 'solo'].include?(node[:instance_role])
 			source "custom.conf"
 		end
 	end
+
+	execute "Reload nginx config" do
+		command "sudo /etc/init.d/nginx reload"
+	end
 end
