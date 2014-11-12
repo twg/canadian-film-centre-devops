@@ -22,6 +22,9 @@
 #uncomment to turn on memcached
 # include_recipe "memcached"
 
+# uncomment to deny access to /log, /config, and .git directories
+# include_recipe "deny-directories"
+
 #uncomment ot run the riak recipe
 # include_recipe "riak"
 
